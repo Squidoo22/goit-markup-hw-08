@@ -1,0 +1,106 @@
+.team-section {
+  @extend %section;
+  text-align: center;
+  background-color: $secondary-bg;
+}
+
+.team-section__container {
+  @extend %container;
+}
+
+.team-section__title {
+  @extend %section-title;
+}
+
+.team-list {
+  @extend %list;
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-right: -30px;
+  @include for-tablet-landscape-up {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+}
+
+.team-list__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: $primary-white-color;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include for-tablet-landscape-up {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @include for-desktop-up {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.teammate-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.teammate-description__subtitle {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: $subtitle-1;
+  line-height: 1.18;
+  color: $title-text-color;
+}
+
+.teammate-description__text {
+  margin-bottom: 16px;
+  font-size: $subtitle-1;
+  line-height: 1.18;
+}
+
+.teammate-description__link {
+  @extend %social-icon;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:hover .teammate-description__icon,
+  &:focus .teammate-description__icon {
+    fill: $primary-white-color;
+  }
+}
+
+.teammate-description__icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

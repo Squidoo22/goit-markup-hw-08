@@ -1,0 +1,160 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $secondary-black-color;
+}
+
+.page-footer__container {
+  @extend %container;
+  text-align: center;
+
+  @include for-tablet-portrait-up {
+    display: flex;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+.page-footer__info {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+
+  @include for-desktop-up {
+    margin-right: 70px;
+  }
+}
+
+.page-footer__logo {
+  @extend %logo;
+  margin-bottom: 20px;
+  color: $primary-white-color;
+
+  &--accent {
+    color: $accent-color;
+  }
+}
+
+.page-footer__address {
+  font-style: inherit;
+  letter-spacing: 0.03em;
+  color: $primary-white-color;
+}
+
+.page-footer__location,
+.info-list__item:not(:last-child) {
+  padding-bottom: 9px;
+}
+
+.info-list {
+  @extend %list;
+}
+
+.info-list__link {
+  @extend %link;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-socials {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+}
+
+.footer-socials__text,
+.footer-subscribe__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+
+.footer-socials__link {
+  @extend %social-icon;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.footer-socials__icon {
+  fill: $primary-white-color;
+}
+
+.footer-subscribe {
+  @media screen and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+
+  @include for-desktop-up {
+    margin-left: 93px;
+  }
+}
+
+.footer-subscribe__input {
+  min-width: 100%;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: $secondary-black-color;
+  color: rgba(255, 255, 255, 0.6);
+
+  @include for-tablet-portrait-up {
+    min-width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include for-desktop-up {
+    display: inline-flex;
+    min-width: 358px;
+    min-height: 50px;
+  }
+}
+
+.footer-subscribe__btn {
+  @extend %btn;
+  min-width: 200px;
+  min-height: 50px;
+  margin-left: 11px;
+  padding: 10px;
+  font-weight: 700;
+  line-height: 1.87;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
+  }
+}
+
+.footer-subscribe__icon {
+  @include for-desktop-up {
+    margin-left: 10px;
+  }
+}
