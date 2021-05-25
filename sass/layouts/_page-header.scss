@@ -8,7 +8,7 @@
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     display: flex;
     flex-grow: 1;
     align-items: center;
@@ -25,8 +25,8 @@
 .page-header__nav {
   display: flex;
   align-items: flex-end;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  // padding-top: 22px;
+  // padding-bottom: 22px;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -37,6 +37,9 @@
   padding: 16px 0;
   margin-right: 88px;
   // margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
 
   &--accent {
     color: $accent-color;
